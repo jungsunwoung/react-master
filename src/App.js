@@ -12,6 +12,10 @@ from {
   border-radius:100px;
 }
 `;
+
+const Emoji = styled.span`
+  font-size: 36px;
+`;
 const Box = styled.div`
   background-color: tomato;
   width: 100px;
@@ -20,11 +24,9 @@ const Box = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  span {
-    font-size: 36px;
-    &:hover {
-      font-size: 48px;
-    }
+  /* 직접 언급 가능 */
+  ${Emoji}:hover {
+    font-size: 98px;
   }
 `;
 
@@ -51,7 +53,7 @@ function App() {
     // 원래방법
     <Father>
       <Box>
-        <span>😄</span>
+        <Emoji>😄</Emoji>
       </Box>
     </Father>
   );
