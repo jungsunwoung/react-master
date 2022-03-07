@@ -1,7 +1,15 @@
 import styled, { keyframes } from "styled-components";
 
+const Title = styled.h1`
+  color: ${(props) => props.theme.textColor};
+`;
 const Father = styled.div`
   display: flex;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  background-color: ${(props) => props.theme.backgroundColor};
 `;
 const rotateAnimation = keyframes`
 from {
@@ -52,9 +60,7 @@ function App() {
   return (
     // 원래방법
     <Father>
-      <Box>
-        <Emoji>😄</Emoji>
-      </Box>
+      <Title>Hello</Title>
     </Father>
   );
 }
